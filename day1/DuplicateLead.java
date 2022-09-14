@@ -1,24 +1,18 @@
-package week2.day1;
+package week6.day1;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class DuplicateLead {
-
-	public static void main(String[] args) {
+public class DuplicateLead extends LeafTapBase {
+@Test
+	public void runDuplicateLead() throws InterruptedException{
 		// TODO Auto-generated method stub
-		//To add driver to the code
-		WebDriverManager.edgedriver().setup();
-		//To open a browser
-		EdgeDriver driver=new EdgeDriver();
-		//To load an url
-		driver.get("http://leaftaps.com/opentaps/control/login");
-		//To maximize the browser
-		driver.manage().window().maximize();
+		
 		//Enter the username by using id locator
 		WebElement elementUserName = driver.findElement(By.id("username"));
 		elementUserName.sendKeys("DemoSalesManager");
